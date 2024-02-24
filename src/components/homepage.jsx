@@ -10,6 +10,9 @@ function Table(){
     marginRight: '10%'
 
   };
+
+  
+  
     const [data, setData] = useState([]);
     const tableStyle = { width: '100%' };
     useEffect(()=>{
@@ -51,7 +54,7 @@ function Table(){
       return (
         <div style={tableContainerStyle}>
           {/* <DataGrid rows={data} columns={columns} pageSize={5} pagination style={tableStyle} /> */}
-          <DataGrid rows={data} columns={columns} pageSize={10} pagination rowsPerPageOptions={[10, 25, 50, 100]} />
+          <DataGrid rows={data} columns={columns} initialState={{...data.initialState, pagination :{paginationModel :{pageSize :10}},}} pageSizeOptions={[5,10,25]} />
 
         </div>
       );
