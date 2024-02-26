@@ -8,11 +8,9 @@ function Table(){
     width: '80%',
     marginLeft: '10%',
     marginRight: '10%'
-
   };
 
-  
-  
+    
     const [data, setData] = useState([]);
     const tableStyle = { width: '100%' };
     useEffect(()=>{
@@ -24,11 +22,11 @@ function Table(){
                 console.log(response.data);
                 const transformedData = response.data.map(item => ({
                   id: item.id.toString(),
-                  bookname: item.bookname.trim(),
-                  author: item.author.trim(),
-                  genre: item.genre.trim(),
+                  bookname: item.bookname,
+                  author: item.author,
+                  genre: item.genre,
                 //   publishdate: new Date(item.publishdate).toLocaleDateString()
-                  publishdate: item.publishdate.trim()
+                  publishdate: item.publishdate
                 }));
                 setData(transformedData);
                 console.log(data);
