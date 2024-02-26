@@ -26,7 +26,7 @@ function Header(){
   }
 
   const ButtonStyle = {
-    marginTop: "2%",
+    marginTop: "1%",
     marginLeft: "10%",
     paddingRight: "30px"
   };
