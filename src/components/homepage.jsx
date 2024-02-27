@@ -41,12 +41,37 @@ function Table(){
       console.log(data);
     }, [data]);
 
+    function Button(props) {
+      const handleBooking = async(id) => {
+        const res = axios.post('/deleteItem',{
+          id : id
+        });
+        console.log(res);
+        window.location.reload();
+      }
+      
+      return (
+        <>
+            <button onClick={() => handleBooking(props.value.id)}>Delete Slot</button>
+  
+        </>
+      );
+    }
+
     const columns = [
         { field: 'id' , headerName: 'ID', width: 250 },
         { field: 'bookname', headerName: 'Bookname', width: 250 },
         { field: 'author', headerName: 'Author', width: 350 },
         { field: 'genre', headerName: 'Genre', width: 150 },
         { field: 'publishdate', headerName: 'Publishdate', width: 150},
+        {
+          field: 'deleteButton',
+          headerName: 'Action',
+          renderCell: (cellValues) => <Button value={cellValues} variant="danger" >Delete</Button>,
+          disableClickEventBubbling: true,
+          width: 100,
+          filterable: false,
+        },
       ];
     
       return (
