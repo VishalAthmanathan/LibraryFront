@@ -43,7 +43,7 @@ function Table(){
 
     function Button(props) {
       const handleBooking = async(id) => {
-        const res = axios.post('/deleteItem',{
+        const res = await axios.post('/deleteItem',{
           id : id
         });
         console.log(res);
