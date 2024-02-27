@@ -13,7 +13,8 @@ function Header(){
   const [genre, setGenre] = useState('');
   const [publishdate, setPublishdate] = useState('');
 
-  const addBook = () => {
+  const addBook = (e) => {
+    e.preventDefault();
     axios.post('/admindata', {
       id: id,
       bookname: bookname,
@@ -24,7 +25,7 @@ function Header(){
       console.log(response);
     }); 
   }
-
+  console.log(addBook)
   const ButtonStyle = {
     marginTop: "1%",
     marginLeft: "10%",
