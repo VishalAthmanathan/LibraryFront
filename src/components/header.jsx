@@ -13,9 +13,9 @@ function Header(){
   const [genre, setGenre] = useState('');
   const [publishdate, setPublishdate] = useState('');
 
-  const addBook = (e) => {
+  const addBook =  (e) => {
     e.preventDefault();
-    axios.post('/admindata', {
+     axios.post('/admindata', {
       id: id,
       bookname: bookname,
       author: author,
@@ -23,9 +23,9 @@ function Header(){
       publishdate: publishdate
     }).then((response)=>{
       console.log(response);
+      window.location.reload();
     }); 
-
-    window.location.reload();
+    
   }
   console.log(addBook)
   const ButtonStyle = {
