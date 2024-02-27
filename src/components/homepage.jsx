@@ -52,7 +52,7 @@ function Table(){
       
       return (
         <>
-            <button onClick={() => handleBooking(props.value.id)}>Delete Slot</button>
+            <button onClick={() => handleBooking(props.value.id)}>Delete</button>
   
         </>
       );
