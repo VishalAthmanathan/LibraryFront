@@ -69,8 +69,8 @@ function Header(){
           {!showForm ? "Add Books" : "Remove"} 
         </Button>
         {showForm && (
-          <Form>
-            <label style={labelStyle}>Add Books</label>
+          <Form className="form-container">
+            <label className="form-label" style={labelStyle}>Add Books</label>
             <Form.Group className="mb-3" controlId="formBasicCenter">
               <Form.Label>ID</Form.Label>
               <Form.Control type="text" placeholder="Enter ID" onChange={(e) => setId(e.target.value)} />
@@ -96,7 +96,7 @@ function Header(){
               <Form.Control type="text" placeholder=" Enter Published year" onChange={(e) => setPublishedyear(e.target.value)} />
             </Form.Group>
   
-            <Button variant="primary" type='submit' onClick={addBook}>
+            <Button className="submit-button" variant="primary" type='submit' onClick={addBook}>
               Submit
             </Button>
           </Form>
