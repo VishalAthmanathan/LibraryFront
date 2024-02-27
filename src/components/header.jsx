@@ -24,6 +24,8 @@ function Header(){
     }).then((response)=>{
       console.log(response);
     }); 
+
+    window.location.reload();
   }
   console.log(addBook)
   const ButtonStyle = {
@@ -64,7 +66,7 @@ function Header(){
   <hr />
 </div>
         <Button variant="primary" style={{ ...ButtonStyle, ...FirstButtonStyle }} onClick={() =>{setShowForm(!showForm)}}>
-          {!showForm ? "Add Center" : "Remove"} 
+          {!showForm ? "Add Books" : "Remove"} 
         </Button>
         {showForm && (
           <Form>
