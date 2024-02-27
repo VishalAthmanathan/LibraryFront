@@ -11,7 +11,7 @@ function Header(){
   const [bookname, setBookname] = useState('');
   const [author, setAuthor] = useState('');
   const [genre, setGenre] = useState('');
-  const [publishdate, setPublishdate] = useState('');
+  const [publishedyear, setPublishedyear] = useState('');
 
   const addBook =  (e) => {
     e.preventDefault();
@@ -20,7 +20,7 @@ function Header(){
       bookname: bookname,
       author: author,
       genre: genre,
-      publishdate: publishdate
+      publishedyear: publishedyear
     }).then((response)=>{
       console.log(response);
       window.location.reload();
@@ -92,8 +92,8 @@ function Header(){
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicSlots">
-              <Form.Label>Publishdate</Form.Label>
-              <Form.Control type="text" placeholder=" Enter Publishdate" onChange={(e) => setPublishdate(e.target.value)} />
+              <Form.Label>Published year</Form.Label>
+              <Form.Control type="text" placeholder=" Enter Published year" onChange={(e) => setPublishedyear(e.target.value)} />
             </Form.Group>
   
             <Button variant="primary" type='submit' onClick={addBook}>

@@ -26,7 +26,7 @@ function Table(){
                   author: item.author,
                   genre: item.genre,
                 //   publishdate: new Date(item.publishdate).toLocaleDateString()
-                  publishdate: item.publishdate
+                  publishedyear: item.publishedyear.toString()
                 }));
                 setData(transformedData);
                 console.log(data);
@@ -63,7 +63,7 @@ function Table(){
         { field: 'bookname', headerName: 'Bookname', width: 250 },
         { field: 'author', headerName: 'Author', width: 350 },
         { field: 'genre', headerName: 'Genre', width: 150 },
-        { field: 'publishdate', headerName: 'Publishdate', width: 150},
+        { field: 'publishedyear', headerName: 'Published year', width: 150},
         {
           field: 'deleteButton',
           headerName: 'Action',
